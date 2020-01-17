@@ -4,7 +4,8 @@
     <color name="colorPrimary">#FFF</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#2196F3</color>
-<!--    <color name="mtrl_textinput_default_box_stroke_color">#DDD</color>-->
+    <color name="lightThemeBlue">#03508c</color>
+    <!--    <color name="mtrl_textinput_default_box_stroke_color">#DDD</color>-->
 
     <color name="background">#262A32</color>
     <color name="backgroundDark">#1d2026</color>
@@ -19,7 +20,6 @@
     <color name="green_pastel">#00CE98</color>
     <color name="red_pastel">#EF5350</color>
     <color name="yellow_pastel">#FFA726</color>
-    <color name="yellow_pastel2">#FFC107</color>
-
+    <color name="yellow_pastel2">#FFCA28</color>
 
 </resources>

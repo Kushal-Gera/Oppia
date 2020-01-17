@@ -1,26 +1,43 @@
 <resources>
-    <string name="app_name">SideBar</string>
+    <string name="app_name">Recommender</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="spinner1">
+        <item>Shared</item>
+        <item>Economy</item>
+        <item>Luxury</item>
+    </string-array>
+
+    <string-array name="spinner2">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>More</item>
+    </string-array>
+
+    <string-array name="spinner3">
+        <item>Yes</item>
+        <item>No</item>
+        <item>Sometimes</item>
+    </string-array>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="diet_routines">Diet Routines</string>
     <string name="description">description</string>
-    <string name="performance">Performance</string>
-    <string name="exercises">Exercises</string>
-    <string name="diet_guide">Diet Guide</string>
+    <string name="performance">My Rides</string>
+    <string name="exercises">Policies</string>
+    <string name="diet_guide">Notifications</string>
     <string name="gallery">Gallery</string>
     <string name="phone_number">Phone Number</string>
     <string name="enter_otp">Enter OTP</string>
     <string name="settings">Settings</string>
     <string name="enter_phone_number">Enter Phone Number</string>
     <string name="login">Login</string>
-    <string name="memberships">Memberships</string>
+    <string name="memberships">New Ride</string>
     <string name="logout">Logout</string>
     <string name="contact_us">Contact Us</string>
     <string name="home">Home</string>
     <string name="get_code">Get Code</string>
-    <string name="diet_rules">The given Diet Formats are based for an average Indian person; Considering a weight = 70 Kg and height = 5\'8\".\nYou may need to modify your macro-nutrients according to your BMI.</string>
-    <string name="exercise_rules">The given Exercise Routines are based on a Beginner to Intermediate level; Considering a weight = 70 Kg and height = 5\'8\".\nYou may need to modify your weights according to your capacity.</string>
     <string name="exercise_routines">Exercise Routines</string>
     <string name="help_us_know_you_better">Help Us Know You Better</string>
     <string name="let_s_get_started">Let\'s Get Started</string>
@@ -31,20 +48,18 @@
     <string name="enter_age">Enter Age *</string>
     <string name="enter_your_weight">Weight *</string>
     <string name="edit_details">Edit Details</string>
-    <string name="launch_camera_on_start">Launch Camera on Start</string>
     <string name="developers">Developers</string>
     <string name="rate_us">Rate Us</string>
     <string name="suggestions">Suggestions</string>
     <string name="share_app">Share App</string>
     <string name="receive_notifications">Receive Notifications</string>
-    <string name="marked_successfully">Marked\nSuccessfully !</string>
     <string name="this_may_take_a_few_time_to_get_updated">This may take a few time to get updated</string>
     <string name="proteins">Proteins</string>
     <string name="fats">Fats</string>
     <string name="carbohydrates">Carbohydrates</string>
-    <string name="remember_your_macros">Remember Your Macros</string>
-    <string name="macro_division">Below is the division of Macro - Nutrients (macros) based on your Height and weight; off course along with Plenty of Water !!</string>
-    <string name="height">Height (cm) *</string>
     <string name="dark_mode_enabled">Dark Mode</string>
     <string name="clear_data_on_logout">Clear Data on Logout</string>
+    <string name="how_often_ndo_you_travel_in_a_month">How often\ndo you travel in a month ?</string>
+    <string name="do_you_travel_alone">Do you travel Alone ?</string>
+    <string name="your_preferred_nride_type_for_a_journey">Your preferred \nride type for a journey ?</string>
 </resources>

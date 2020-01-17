@@ -36,7 +36,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/person"
-                app:civ_border_color="?attr/toolbarColor"
+                app:civ_border_color="@color/yellow_pastel"
                 app:civ_border_width="2dp" />
 
             <TextView
@@ -92,16 +92,6 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:contentDescription="@string/description"
-                    android:src="@drawable/green_dot"
-                    android:visibility="gone" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -114,27 +104,18 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
-                    android:id="@+id/membership_tv"
+                    android:id="@+id/newRide"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="5dp"
-                    android:drawableStart="@drawable/cost"
+                    android:drawableStart="@drawable/ic_directions_car_black_24dp"
                     android:drawablePadding="5dp"
                     android:drawableTint="?attr/textSecondary"
                     android:text="@string/memberships"
                     android:textColor="@color/gray"
                     android:textSize="20sp"
                     tools:ignore="UnusedAttribute" />
-
-                <ImageView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:contentDescription="@string/description"
-                    android:src="@drawable/green_dot" />
 
             </LinearLayout>
 
@@ -149,12 +130,12 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
-                    android:id="@+id/perform_tv"
+                    android:id="@+id/myRide"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="5dp"
-                    android:drawableStart="@drawable/perf"
+                    android:drawableStart="@drawable/rides"
                     android:drawablePadding="5dp"
                     android:drawableTint="?attr/textSecondary"
                     android:gravity="center"
@@ -163,16 +144,30 @@
                     android:textSize="20sp"
                     tools:ignore="UnusedAttribute" />
 
-                <ImageView
-                    android:id="@+id/perf_tv_dot"
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/notifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:contentDescription="@string/description"
-                    android:src="@drawable/yellow_dot"
-                    android:visibility="gone" />
+                    android:drawableStart="@drawable/ic_notifications_active_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="?attr/textSecondary"
+                    android:text="@string/diet_guide"
+                    android:textColor="@color/gray"
+                    android:textSize="20sp"
+                    tools:ignore="UnusedAttribute" />
 
             </LinearLayout>
 
@@ -187,98 +182,18 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
-                    android:id="@+id/exercise_tv"
+                    android:id="@+id/policies"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="5dp"
-                    android:drawableStart="@drawable/exercise"
+                    android:drawableStart="@drawable/polici"
                     android:drawablePadding="5dp"
                     android:drawableTint="?attr/textSecondary"
                     android:text="@string/exercises"
                     android:textColor="@color/gray"
                     android:textSize="20sp"
                     tools:ignore="UnusedAttribute" />
-
-                <ImageView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:contentDescription="@string/description"
-                    android:src="@drawable/yellow_dot"
-                    android:visibility="gone" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:orientation="horizontal"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                tools:ignore="UseCompoundDrawables">
-
-                <TextView
-                    android:id="@+id/diet_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:drawableStart="@drawable/diet"
-                    android:drawablePadding="5dp"
-                    android:drawableTint="?attr/textSecondary"
-                    android:text="@string/diet_guide"
-                    android:textColor="@color/gray"
-                    android:textSize="20sp"
-                    tools:ignore="UnusedAttribute" />
-
-                <ImageView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:contentDescription="@string/description"
-                    android:src="@drawable/green_dot"
-                    android:visibility="gone" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:orientation="horizontal"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                tools:ignore="UseCompoundDrawables">
-
-                <TextView
-                    android:id="@+id/gallery_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:drawableStart="@drawable/gallery"
-                    android:drawablePadding="5dp"
-                    android:drawableTint="?attr/textSecondary"
-                    android:text="@string/gallery"
-                    android:textColor="@color/gray"
-                    android:textSize="20sp"
-                    tools:ignore="UnusedAttribute" />
-
-                <ImageView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:contentDescription="@string/description"
-                    android:src="@drawable/green_dot"
-                    android:visibility="gone" />
 
             </LinearLayout>
 

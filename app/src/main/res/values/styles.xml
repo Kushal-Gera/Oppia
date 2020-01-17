@@ -5,10 +5,10 @@
 
         <item name="primaryColor">@color/colorPrimaryDark</item>
         <item name="primaryColorDark">@color/colorPrimary</item>
-        <item name="accentColor">#01579B</item>
+        <item name="accentColor">@color/lightThemeBlue</item>
 
         <item name="backgroundColor">#F5F5F5</item>
-        <item name="backgroundColorDark">#01579B</item>
+        <item name="backgroundColorDark">@color/lightThemeBlue</item>
         <item name="toolbarColor">#2999f2</item>
 
         <item name="textPrimary">@color/black</item>
@@ -19,11 +19,12 @@
         <item name="colorControlNormal">#CDCDCD</item>
         <item name="colorControlActivated">#2999f2</item>
 
-        <item name="statusBarColorD">#01579B</item>
-        <item name="statusBarColorL">#01579B</item>
+        <item name="statusBarColorD">@color/lightThemeBlue</item>
+        <item name="statusBarColorL">@color/lightThemeBlue</item>
 
-        <item name="android:statusBarColor">#01579B</item>
-        <item name="dialogBG">#01579B</item>
+        <item name="android:statusBarColor">@color/lightThemeBlue</item>
+        <item name="dialogBG">#1c649c</item>
+
         <item name="accentDialog">@color/yellow_pastel</item>
         <item name="accentDialogGreen">@color/yellow_pastel</item>
 
