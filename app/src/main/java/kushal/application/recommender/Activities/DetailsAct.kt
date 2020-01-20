@@ -35,29 +35,7 @@ class DetailsAct : AppCompatActivity() {
         window.statusBarColor = getColorFromAttr(R.attr.statusBarColorL)
 
 
-        val adapter1 = ArrayAdapter.createFromResource(
-            this,
-            R.array.spinner1,
-            android.R.layout.simple_spinner_item
-        )
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner1.adapter = adapter1
-
-        val adapter2 = ArrayAdapter.createFromResource(
-            this,
-            R.array.spinner2,
-            android.R.layout.simple_spinner_item
-        )
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner2.adapter = adapter2
-
-        val adapter3 = ArrayAdapter.createFromResource(
-            this,
-            R.array.spinner3,
-            android.R.layout.simple_spinner_item
-        )
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner3.adapter = adapter3
+        setUpSpinners()
 
 
         save.setOnClickListener(View.OnClickListener {
@@ -93,6 +71,42 @@ class DetailsAct : AppCompatActivity() {
             male?.setTextColor(Color.WHITE)
             female.setTextColor(getColorFromAttr(R.attr.hintColor))
         }
+
+    }
+
+    private fun setUpSpinners() {
+
+        val adapter1 = ArrayAdapter.createFromResource(
+            this,
+            R.array.spinner1,
+            R.layout.spinner_item
+        )
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner1.adapter = adapter1
+
+        val adapter2 = ArrayAdapter.createFromResource(
+            this,
+            R.array.spinner2,
+            R.layout.spinner_item
+        )
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner2.adapter = adapter2
+
+        val adapter3 = ArrayAdapter.createFromResource(
+            this,
+            R.array.spinner3,
+            R.layout.spinner_item
+        )
+        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner3.adapter = adapter3
+
+        val adapter4 = ArrayAdapter.createFromResource(
+            this,
+            R.array.spinner4,
+            R.layout.spinner_item
+        )
+        adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner4.adapter = adapter4
 
     }
 

@@ -23,7 +23,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="Policies would be listed here !"
-        android:textColor="@color/black"
+        android:textColor="?attr/textPrimary"
         android:textSize="24sp" />
 
 

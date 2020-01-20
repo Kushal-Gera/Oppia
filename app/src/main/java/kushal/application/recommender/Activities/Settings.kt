@@ -2,13 +2,15 @@ package kushal.application.recommender.Activities
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.TypedValue
-import android.view.View
 import android.webkit.MimeTypeMap
 import android.widget.Switch
 import android.widget.Toast
@@ -17,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_settings.*
-import kushal.application.custombar.CustomBar
+import kotlinx.android.synthetic.main.dialog.*
 import kushal.application.recommender.R
 
 
@@ -32,6 +34,13 @@ class Settings : AppCompatActivity() {
 
     val WEB_APP_LINK = "http://play.google.com/store/apps/details?id=" + "kushal.application.gym"
     val GMAIL_LINK = "kushalgera1212@gmail.com"
+
+    val diksha = "https://www.linkedin.com/in/diksha-gupta-25d"
+    val bhola = "https://www.linkedin.com/in/bhola-yadav-346669190"
+    val shri = "https://www.linkedin.com/in/ayush-srivastava-a1015516b"
+    val kushal = "https://github.com/Kushal-Gera"
+    val kaustav = "https://www.linkedin.com/in/kaustuv-sahu-070144170"
+    val garg = "https://www.linkedin.com/in/ayush-garg-b105a1174"
 
     val sharedPreferences by lazy {
         applicationContext.getSharedPreferences(SHARED_PREF, Context.MODE_PRIVATE)
@@ -70,24 +79,39 @@ class Settings : AppCompatActivity() {
             onBackPressed()
         }
         setting_dev.setOnClickListener {
-            CustomBar(it, "Developed by Kushal Gera :", CustomBar.LENGTH_LONG).run {
+            val dialog = Dialog(this)
+            dialog.setContentView(R.layout.dialog)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.show()
 
-                setTextSize(16f)
+            val intent = Intent(Intent.ACTION_VIEW)
 
-                actionTextColor(R.color.yellow_pastel2)
-                actionText("Git Hub", View.OnClickListener {
-                    startActivity(
-                        Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Kushal-Gera"))
-                    )
-                }, false, 16f)
-
-                setBackground(R.drawable.bg_toolbar)
-
-                setMargins(15, 0, 15, 30)
-
-                show()
-
+            dialog.kushal.setOnClickListener {
+                intent.data = Uri.parse(kushal)
+                startActivity(intent)
             }
+            dialog.kaustav.setOnClickListener {
+                intent.data = Uri.parse(kaustav)
+                startActivity(intent)
+            }
+            dialog.shrivastav.setOnClickListener {
+                intent.data = Uri.parse(shri)
+                startActivity(intent)
+            }
+            dialog.diksha.setOnClickListener {
+                intent.data = Uri.parse(diksha)
+                startActivity(intent)
+            }
+            dialog.garg.setOnClickListener {
+                intent.data = Uri.parse(garg)
+                startActivity(intent)
+            }
+            dialog.bhola.setOnClickListener {
+                intent.data = Uri.parse(bhola)
+                startActivity(intent)
+            }
+
+
         }
         setting_share.setOnClickListener { shareIT() }
         setting_rate.setOnClickListener { rateUs() }

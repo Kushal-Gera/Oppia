@@ -24,7 +24,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="No new notifications available."
-        android:textColor="@color/black"
+        android:textColor="?attr/textPrimary"
         android:textSize="24sp" />
 
 </LinearLayout>
