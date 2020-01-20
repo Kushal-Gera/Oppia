@@ -2,15 +2,15 @@
     <string name="app_name">Recommender</string>
 
     <string-array name="spinner1">
-        <item>Economy</item>
-        <item>Business</item>
-    </string-array>
-
-    <string-array name="spinner2">
         <item>Mini</item>
         <item>Prime</item>
         <item>Share</item>
         <item>SUV</item>
+    </string-array>
+
+    <string-array name="spinner2">
+        <item>Economy</item>
+        <item>Business</item>
     </string-array>
 
     <string-array name="spinner3">

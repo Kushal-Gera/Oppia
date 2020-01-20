@@ -51,8 +51,14 @@ class DetailsAct : AppCompatActivity() {
             saveData()
 
             Toast.makeText(this, "saved", Toast.LENGTH_SHORT).show()
-            detail_container.visibility = View.GONE
-            animation_view_detail.visibility = View.VISIBLE
+
+            detail_container.animate().scaleY(0.4f).scaleY(0.4f).duration = 200
+
+            Handler().postDelayed({
+                detail_container.visibility = View.GONE
+                animation_view_detail.visibility = View.VISIBLE
+            }, 200)
+
             Handler().postDelayed({
                 finish()
             }, 1300)
