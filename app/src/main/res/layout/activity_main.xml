@@ -57,7 +57,7 @@
                 android:gravity="center"
                 android:textColor="#FFF"
                 android:textSize="20sp"
-                tools:text="25 yrs" />
+                tools:text="20 yrs" />
 
         </LinearLayout>
 
@@ -104,12 +104,12 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
-                    android:id="@+id/newRide"
+                    android:id="@+id/myPurchases"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="5dp"
-                    android:drawableStart="@drawable/ic_directions_car_black_24dp"
+                    android:drawableStart="@drawable/ic_local_mall_black_24dp"
                     android:drawablePadding="5dp"
                     android:drawableTint="?attr/textSecondary"
                     android:text="@string/memberships"
@@ -130,7 +130,7 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
-                    android:id="@+id/myRide"
+                    android:id="@+id/leranTrack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -228,8 +228,7 @@
                 android:layout_gravity="start"
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="20dp"
-                android:drawableStart="@drawable/contact"
-                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_mode_comment_black_24dp"
                 android:gravity="center"
                 android:text="@string/contact_us"
                 android:textColor="#DEDEDE"
@@ -281,10 +280,13 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="8"
-                    android:gravity="center"
-                    android:text="@string/app_name"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="20dp"
+                    android:text="Welcome to Oppia"
                     android:textColor="#FFF"
-                    android:textSize="20sp" />
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
 
                 <ImageView
                     android:id="@+id/settings"

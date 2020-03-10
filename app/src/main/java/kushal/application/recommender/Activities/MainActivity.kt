@@ -18,7 +18,6 @@ import androidx.annotation.AttrRes
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kushal.application.recommender.Fragments.*
 import kushal.application.recommender.R
@@ -40,12 +39,10 @@ class MainActivity : AppCompatActivity() {
 
     private val menuItemList by lazy {
         arrayListOf<TextView>(
-            home_tv, newRide,
-            myRide, policies, notifi
+            home_tv, myPurchases,
+            leranTrack, policies, notifi
         )
     }
-
-    val auth = FirebaseAuth.getInstance()
 
     private val sharedPreferences: SharedPreferences by lazy {
         getSharedPreferences(SHARED_PREF, Context.MODE_PRIVATE)
@@ -55,18 +52,10 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (sharedPreferences.getBoolean(IS_THEME_DARK, false))
-            setTheme(R.style.MyDarkTheme)
-        else
-            setTheme(R.style.AppTheme)
         setContentView(R.layout.activity_main)
 
 
-        if (!sharedPreferences.getBoolean("is_prev", false)) {
-            startActivity(Intent(this, DetailsAct::class.java))
-        }
-
-        main_name.text = sharedPreferences.getString(USER_NAME, "User")
+        main_name.text = sharedPreferences.getString(USER_NAME, "Kushal")
         main_age.text = sharedPreferences.getString(USER_AGE, "25") + " yrs"
 
         drawer.setOnClickListener {
@@ -116,19 +105,19 @@ class MainActivity : AppCompatActivity() {
 
             onBackPressed()
         }
-        newRide.setOnClickListener {
+        myPurchases.setOnClickListener {
             colorToWhite(it)
             header_text.text = getString(R.string.memberships)
             // further changes specific to membership plans
-            fManager.beginTransaction().replace(R.id.layout, NewRide()).commit()
+            fManager.beginTransaction().replace(R.id.layout, MyPurchase()).commit()
             ON_HOME = false
 
             onBackPressed()
         }
-        myRide.setOnClickListener {
+        leranTrack.setOnClickListener {
             colorToWhite(it)
             header_text.text = getString(R.string.performance)
-            fManager.beginTransaction().replace(R.id.layout, MyRides()).commit()
+            fManager.beginTransaction().replace(R.id.layout, LearnTrack()).commit()
             ON_HOME = false
 
             onBackPressed()
@@ -157,11 +146,11 @@ class MainActivity : AppCompatActivity() {
             //            onBackPressed()
             val builder = AlertDialog.Builder(
                 this,
-                R.style.AlertDialogGreen
+                R.style.AlertDialogCustom
             )
             builder.setTitle("Contact Us Here")
                 .setMessage("Our support team : \n+91 $number")
-                .setPositiveButton("WhatsApp") { dialog: DialogInterface, pos: Int ->
+                .setPositiveButton("Chat") { dialog: DialogInterface, pos: Int ->
                     //whatsApp
                     val i = Intent(Intent.ACTION_VIEW)
                     i.data = Uri.parse("https://wa.me/+91$number")
@@ -184,10 +173,7 @@ class MainActivity : AppCompatActivity() {
             builder.setTitle("Do you really want to Logout ?")
                 .setMessage("Don't worry! All progress will be saved")
                 .setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
-                    Toast.makeText(this, "Logging Out...", Toast.LENGTH_SHORT).show()
-                    auth.signOut()
-                    startActivity(Intent(this, LoginAct::class.java))
-                    finish()
+                    Toast.makeText(this, "Not Logging Out...", Toast.LENGTH_SHORT).show()
                 }
                 .setNegativeButton("No") { dialogInterface, i ->
                     //do nothing
@@ -254,7 +240,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         main_name.text = sharedPreferences.getString(USER_NAME, "User")
-        main_age.text = sharedPreferences.getString(USER_AGE, "25") + " yrs"
+        main_age.text = sharedPreferences.getString(USER_AGE, "20") + " yrs"
     }
 
     fun getColorFromAttr(

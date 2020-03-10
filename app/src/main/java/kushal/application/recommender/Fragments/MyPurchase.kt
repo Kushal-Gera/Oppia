@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import kushal.application.recommender.R
 
 
-class NewRide : Fragment() {
+class MyPurchase : Fragment() {
 
 
     override fun onCreateView(
@@ -16,9 +16,7 @@ class NewRide : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.new_ride, container, false)
-
-
+        val view = inflater.inflate(R.layout.my_purch, container, false)
 
 
         return view

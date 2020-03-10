@@ -1,36 +1,10 @@
 <resources>
-    <string name="app_name">Recommender</string>
-
-    <string-array name="spinner1">
-        <item>Mini</item>
-        <item>Prime</item>
-        <item>Share</item>
-        <item>SUV</item>
-    </string-array>
-
-    <string-array name="spinner2">
-        <item>Economy</item>
-        <item>Business</item>
-    </string-array>
-
-    <string-array name="spinner3">
-        <item>One</item>
-        <item>Two</item>
-        <item>Three</item>
-        <item>Four</item>
-        <item>More</item>
-    </string-array>
-
-    <string-array name="spinner4">
-        <item>Yes</item>
-        <item>No</item>
-        <item>Sometimes</item>
-    </string-array>
+    <string name="app_name">Oppia</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="diet_routines">Diet Routines</string>
     <string name="description">description</string>
-    <string name="performance">My Rides</string>
+    <string name="performance">learning Track</string>
     <string name="exercises">Policies</string>
     <string name="diet_guide">Notifications</string>
     <string name="gallery">Gallery</string>
@@ -39,7 +13,7 @@
     <string name="settings">Settings</string>
     <string name="enter_phone_number">Enter Phone Number</string>
     <string name="login">Login</string>
-    <string name="memberships">New Ride</string>
+    <string name="memberships">My Purchases</string>
     <string name="logout">Logout</string>
     <string name="contact_us">Contact Us</string>
     <string name="home">Home</string>
