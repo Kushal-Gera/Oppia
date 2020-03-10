@@ -7,12 +7,17 @@ import kushal.application.recommender.R
 import kushal.application.recommender.ViewHolders.Home_viewHolder
 
 
-class Home_adapter(val list: Array<Int>) : RecyclerView.Adapter<Home_viewHolder>() {
+class Home_adapter(val list: Array<Int>, val large: Boolean) :
+    RecyclerView.Adapter<Home_viewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Home_viewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.home_rec_view, parent, false)
+            if (large)
+                LayoutInflater.from(parent.context).inflate(R.layout.home_rec_view, parent, false)
+            else
+                LayoutInflater.from(parent.context).inflate(R.layout.home_rec_view_2, parent, false)
+
         return Home_viewHolder(view)
     }
 

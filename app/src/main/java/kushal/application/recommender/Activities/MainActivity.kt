@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -67,16 +67,11 @@ class MainActivity : AppCompatActivity() {
                 .scaleY(0.6f)
                 .duration = 1000
 
-            window.statusBarColor = getColorFromAttr(R.attr.statusBarColorD)
-            container.setBackgroundColor(getColorFromAttr(R.attr.backgroundColorDark))
+            window.statusBarColor = getColor(R.color.orange)
+            container.setBackgroundColor(getColor(R.color.orange))
 
             drawer.visibility = View.INVISIBLE
             IS_SHORT = true
-
-
-            val dp = sharedPreferences.getString("dp", "none")
-            if (!dp.equals("none"))
-                Glide.with(this).load(dp).into(main_photo)
 
         }
         settings.setOnClickListener {
@@ -95,10 +90,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setUpMenuItems() {
 
         home_tv.setOnClickListener {
-            header_text.text = getString(R.string.home)
+            header_text.text = "Welcome to Oppia"
             colorToWhite(it)
             fManager.beginTransaction().replace(R.id.layout, HomeFrag()).commit()
             ON_HOME = true
@@ -208,6 +204,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n", "NewApi")
     override fun onBackPressed() {
         if (IS_SHORT) {
             layout.animate().translationX(0f)
@@ -219,15 +216,15 @@ class MainActivity : AppCompatActivity() {
             Handler().postDelayed({
                 drawer.visibility = View.VISIBLE
                 menu.visibility = View.INVISIBLE
-                window.statusBarColor = getColorFromAttr(R.attr.statusBarColorL)
-                container.setBackgroundColor(getColorFromAttr(R.attr.backgroundColor))
+                window.statusBarColor = getColor(R.color.orange)
+                container.setBackgroundColor(getColor(R.color.white))
             }, 600)
 
             IS_SHORT = !IS_SHORT
 
         } else if (!ON_HOME) {
             fManager.beginTransaction().replace(R.id.layout, HomeFrag()).commit()
-            header_text.text = getString(R.string.home)
+            header_text.text = "Welcome to Oppia"
             colorToWhite(home_tv)
             ON_HOME = !ON_HOME
         } else

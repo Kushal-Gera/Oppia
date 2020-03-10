@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Explore" />
+    <item
+        android:icon="@drawable/video"
+        android:title="Saved Stuff" />
+    <item
+        android:icon="@drawable/ic_data_usage_black_24dp"
+        android:title="Dashboard" />
+    <item
+        android:icon="@drawable/doubt"
+        android:title="Doubts" />
+
+</menu>
